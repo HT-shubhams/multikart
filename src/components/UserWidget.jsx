@@ -1,6 +1,5 @@
 import useUserStore from "../useUserStore";
-import Sidebar from "./Sidebar";
-import UserList from "./UserList";
+import UserCard from "./UserCard";
 import styles from "./userwidget.module.css";
 
 export default function UserWidget() {
@@ -8,9 +7,8 @@ export default function UserWidget() {
 
   return (
     <div className={styles.userWidgetContainer}>
-      <Sidebar />
       {users.map((user) => (
-        <UserList key={user.id} user={user} />
+        <UserCard key={user.id} user={user} />
       ))}
     </div>
   );

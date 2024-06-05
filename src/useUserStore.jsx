@@ -8,7 +8,7 @@ const useUserStore = create((set) => ({
       firstName: "John",
       lastName: "Doe",
       email: "john.doe@example.com",
-      status: "active",
+      status: "Active",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const useUserStore = create((set) => ({
       firstName: "Jane",
       lastName: "Smith",
       email: "jane.smith@example.com",
-      status: "inactive",
+      status: "Inactive",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const useUserStore = create((set) => ({
       firstName: "Alice",
       lastName: "Johnson",
       email: "alice.johnson@example.com",
-      status: "active",
+      status: "Active",
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ const useUserStore = create((set) => ({
       firstName: "Bob",
       lastName: "Brown",
       email: "bob.brown@example.com",
-      status: "inactive",
+      status: "Inactive",
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const useUserStore = create((set) => ({
       firstName: "Charlie",
       lastName: "Davis",
       email: "charlie.davis@example.com",
-      status: "active",
+      status: "Active",
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const useUserStore = create((set) => ({
       firstName: "David",
       lastName: "Wilson",
       email: "david.wilson@example.com",
-      status: "inactive",
+      status: "Inactive",
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ const useUserStore = create((set) => ({
       firstName: "Eve",
       lastName: "Clark",
       email: "eve.clark@example.com",
-      status: "active",
+      status: "Active",
     },
     {
       id: 8,
@@ -64,7 +64,7 @@ const useUserStore = create((set) => ({
       firstName: "Frank",
       lastName: "Martinez",
       email: "frank.martinez@example.com",
-      status: "inactive",
+      status: "Inactive",
     },
     {
       id: 9,
@@ -72,7 +72,7 @@ const useUserStore = create((set) => ({
       firstName: "Grace",
       lastName: "Rodriguez",
       email: "grace.rodriguez@example.com",
-      status: "active",
+      status: "Active",
     },
     {
       id: 10,
@@ -80,7 +80,7 @@ const useUserStore = create((set) => ({
       firstName: "Hank",
       lastName: "Lewis",
       email: "hank.lewis@example.com",
-      status: "inactive",
+      status: "Inactive",
     },
   ],
   setUsers: (users) => set({ users }),

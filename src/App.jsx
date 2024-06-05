@@ -1,10 +1,10 @@
 import React from "react";
-import UserWidget from "./components/UserWidget";
+import UserCard from "./components/UserWidget";
 
 function App() {
   return (
     <div className="App">
-      <UserWidget />
+      <UserCard />
     </div>
   );
 }
