@@ -5,9 +5,9 @@ const useUserStore = create((set) => ({
     {
       id: 1,
       photo: "https://via.placeholder.com/100",
-      firstName: "John",
-      lastName: "Doe",
-      email: "john.doe@example.com",
+      firstName: "Rowan",
+      lastName: "Torres",
+      email: "rowan.torres@gmail.com",
       status: "Active",
     },
     {
