@@ -1,7 +1,5 @@
 import useUserStore from "../useUserStore";
 import UserCard from "./UserCard";
-import styles from "./userwidget.module.css";
-import Sidebar from "./Sidebar";
 
 export default function UserWidget() {
   const users = useUserStore((state) => state.users);
@@ -9,7 +7,7 @@ export default function UserWidget() {
   return (
     <div>
       {/* <Sidebar /> */}
-      <div className={styles.userWidgetContainer}>
+      <div className="flex gap-1">
         {users.map((user) => (
           <UserCard key={user.id} user={user} />
         ))}
