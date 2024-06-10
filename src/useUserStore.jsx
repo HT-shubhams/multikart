@@ -63,7 +63,7 @@ const useUserStore = create((set) => ({
       photo: "https://via.placeholder.com/100",
       firstName: "Frank",
       lastName: "Martinez",
-      email: "frank.martinez@example.com",
+      email: "frank@example.com",
       status: "Inactive",
     },
     {
