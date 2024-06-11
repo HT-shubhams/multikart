@@ -1,21 +1,17 @@
-import useUserStore from "../useUserStore";
+import React from "react";
 import UserCard from "./UserCard";
-import Sidebar from "./Sidebar";
+import useUserStore from "../useUserStore";
 
-export default function UserWidget() {
+const UserList = () => {
   const users = useUserStore((state) => state.users);
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/5 h-full">
-        <Sidebar />
-      </div>
-      <div className="w-4/5 h-full p-4 grid lg:grid-cols-3 gap-4">
-        {/* <div className="w-4/5 h-full p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div> */}
-        {users.map((user) => (
-          <UserCard key={user.id} user={user} />
-        ))}
-      </div>
+    <div className="grid grid-cols-3 gap-4">
+      {users.map((user) => (
+        <UserCard key={user.id} user={user} />
+      ))}
     </div>
   );
-}
+};
+
+export default UserList;
