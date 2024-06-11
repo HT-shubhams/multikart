@@ -11,13 +11,16 @@ export default function UserCard({ user }) {
         />
       </div>
       <div className="flex flex-col justify-center p-2 text-[#63666B]">
-        <p className="font-bold text-xl">{`${user.firstName} ${user.lastName}`}</p>
+        <p className="font-poppins text-[18px] font-medium leading-[27px] text-left">
+          {`${user.firstName} ${user.lastName}`}
+        </p>
         <p
-          className="email text-ellipsis whitespace-nowrap overflow-hidden max-w-[180px]"
+          className="font-poppins text-[14px] font-normal leading-[21px] text-left text-ellipsis whitespace-nowrap overflow-hidden max-w-[180px]"
           title={user.email}
         >
           {user.email}
         </p>
+
         <div className="flex items-center">
           {user.status === "Active" ? (
             <div className="flex items-center">
@@ -25,13 +28,15 @@ export default function UserCard({ user }) {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="#52D229"
+                fill="#52D229" // Green for active status
                 className="bi bi-dot"
                 viewBox="0 0 16 16"
               >
                 <circle cx="8" cy="8" r="5" />
               </svg>
-              <span>{user.status}</span>
+              <span className="font-poppins text-[14px] font-normal leading-[21px] text-left">
+                Active
+              </span>
             </div>
           ) : (
             <div className="flex items-center">
@@ -39,13 +44,15 @@ export default function UserCard({ user }) {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="#F19803"
+                fill="#F19803" // Orange for inactive status
                 className="bi bi-dot"
                 viewBox="0 0 16 16"
               >
                 <circle cx="8" cy="8" r="5" />
               </svg>
-              <span>{user.status}</span>
+              <span className="font-poppins text-[14px] font-normal leading-[21px] text-left">
+                Inactive
+              </span>
             </div>
           )}
         </div>
