@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import UserCard from "./components/UserWidget";
+import UserCard from "./components/UserList";
 
 function App() {
   return (

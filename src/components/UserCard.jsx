@@ -7,44 +7,43 @@ export default function UserCard({ user }) {
         <img
           src={user.photo}
           alt={`${user.firstName} ${user.lastName}`}
-          className="photo rounded-full w-[75px] h-[75px]"
+          className="photo rounded-full w-[75px] h-[75px] min-w-[75px] min-h-[75px]"
         />
       </div>
       <div className="details flex flex-col justify-center p-2 text-[#63666B]">
         <p className="name font-bold text-xl">{`${user.firstName} ${user.lastName}`}</p>
         <p className="email">{user.email}</p>
-        <p className="status flex items-start">
+        <div className="status flex items-start">
           {user.status === "Active" ? (
-            <p className="flex place-items-center ">
+            <div className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="#52D229"
-                class="bi bi-dot"
+                className="bi bi-dot"
                 viewBox="0 0 16 16"
               >
-                {/* <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" /> */}
                 <circle cx="8" cy="8" r="5" />
               </svg>
-              {user.status}
-            </p>
+              <span>{user.status}</span>
+            </div>
           ) : (
-            <p className="flex place-items-center ">
+            <div className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="#F19803"
-                class="bi bi-dot"
+                className="bi bi-dot"
                 viewBox="0 0 16 16"
               >
                 <circle cx="8" cy="8" r="5" />
               </svg>
-              {user.status}
-            </p>
+              <span>{user.status}</span>
+            </div>
           )}
-        </p>
+        </div>
       </div>
       <div className="flex items-start h-[100%]">
         <svg
