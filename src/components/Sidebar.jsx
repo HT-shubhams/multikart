@@ -3,7 +3,7 @@ import imgPath from "../assets/image_3.png";
 
 const Sidebar = () => {
   return (
-    <div className="bg-white shadow-lg min-h-screen min-w-fit h-full flex flex-col items-center">
+    <div className="bg-white shadow-lg min-h-screen min-w-fit h-auto flex flex-col items-center">
       <img
         // className="w-[157px] h-[28px] mt-[30px] ml-5"
         className="w-[157px] h-[28px] mt-[30px]"

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCard from "./UserCard";
 import useUserStore from "../useUserStore";
+import { GridViewIcon, ListViewIcon } from "../assets/icons";
+import classNames from "classnames";
 
 const UserList = () => {
   const users = useUserStore((state) => state.users);
+  const [isListView, setIsListView] = useState(false);
 
   return (
     <div>
@@ -12,36 +15,31 @@ const UserList = () => {
           Users
         </div>
         <div className="flex items-center">
-          <button className="p-2 border-2 border-[#e0e0e2] rounded-md ">
-            <svg
-              width="23"
-              height="20"
-              viewBox="0 0 23 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-[#641CC0]"
+          <div className="border border-gray-400">
+            <button
+              type="button"
+              onClick={() => {
+                setIsListView(true);
+              }}
+              className={classNames("p-2", { "bg-red-500": isListView })}
             >
-              <path
-                d="M0 0H5V5H0V0ZM7.5 1.25V3.75H22.5V1.25H7.5ZM0 7.5H5V12.5H0V7.5ZM7.5 8.75V11.25H22.5V8.75H7.5ZM0 15H5V20H0V15ZM7.5 16.25V18.75H22.5V16.25H7.5Z"
-                fill="#641CC0"
+              <ListViewIcon
+                className={classNames({
+                  "text-[#641CC0]": !isListView,
+                  "text-white": isListView,
+                })}
               />
-            </svg>
-          </button>
-          <button className="p-2 border-2 border-[#e0e0e2] rounded-md mr-[22px]">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-[#641CC0]"
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setIsListView(false);
+              }}
+              className={classNames("p-2 mr-2", { "bg-red-500": !isListView })}
             >
-              <path
-                d="M10 15C11.375 15 12.5 16.125 12.5 17.5C12.5 18.875 11.375 20 10 20C8.625 20 7.5 18.875 7.5 17.5C7.5 16.125 8.625 15 10 15ZM10 7.5C11.375 7.5 12.5 8.625 12.5 10C12.5 11.375 11.375 12.5 10 12.5C8.625 12.5 7.5 11.375 7.5 10C7.5 8.625 8.625 7.5 10 7.5ZM10 0C11.375 0 12.5 1.125 12.5 2.5C12.5 3.875 11.375 5 10 5C8.625 5 7.5 3.875 7.5 2.5C7.5 1.125 8.625 0 10 0ZM2.5 15C3.875 15 5 16.125 5 17.5C5 18.875 3.875 20 2.5 20C1.125 20 0 18.875 0 17.5C0 16.125 1.125 15 2.5 15ZM2.5 7.5C3.875 7.5 5 8.625 5 10C5 11.375 3.875 12.5 2.5 12.5C1.125 12.5 0 11.375 0 10C0 8.625 1.125 7.5 2.5 7.5ZM2.5 0C3.875 0 5 1.125 5 2.5C5 3.875 3.875 5 2.5 5C1.125 5 0 3.875 0 2.5C0 1.125 1.125 0 2.5 0ZM17.5 15C18.875 15 20 16.125 20 17.5C20 18.875 18.875 20 17.5 20C16.125 20 15 18.875 15 17.5C15 16.125 16.125 15 17.5 15ZM17.5 7.5C18.875 7.5 20 8.625 20 10C20 11.375 18.875 12.5 17.5 12.5C16.125 12.5 15 11.375 15 10C15 8.625 16.125 7.5 17.5 7.5ZM17.5 0C18.875 0 20 1.125 20 2.5C20 3.875 18.875 5 17.5 5C16.125 5 15 3.875 15 2.5C15 1.125 16.125 0 17.5 0Z"
-                fill="#641CC0"
-              />
-            </svg>
-          </button>
+              <GridViewIcon className={"text-[#641CC0]"} />
+            </button>
+          </div>
           <button className="text-xl font-normal bg-[#641cc0] text-[#ffffff] w-[140px] h-[40px] rounded-md mr-6">
             + Add User
           </button>
