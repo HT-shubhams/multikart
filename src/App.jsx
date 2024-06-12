@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="flex h-screen font-poppins">
       <Sidebar />
-      <div className="w-4/5 h-full ">
+      <div className="h-full w-full">
         <Header />
         <UserList />
       </div>
