@@ -1,4 +1,5 @@
 import React from "react";
+import { ActiveDotIcon, InactiveDotIcon, OptionsIcon } from "../assets/icons";
 
 export default function UserCard({ user }) {
   return (
@@ -24,32 +25,14 @@ export default function UserCard({ user }) {
         <div className="flex items-center">
           {user.status === "Active" ? (
             <div className="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#52D229" // Green for active status
-                className="bi bi-dot"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="5" />
-              </svg>
+              <ActiveDotIcon />
               <span className="font-poppins text-[14px] font-normal leading-[21px] text-left">
                 Active
               </span>
             </div>
           ) : (
             <div className="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#F19803" // Orange for inactive status
-                className="bi bi-dot"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="5" />
-              </svg>
+              <InactiveDotIcon />
               <span className="font-poppins text-[14px] font-normal leading-[21px] text-left">
                 Inactive
               </span>
@@ -58,16 +41,7 @@ export default function UserCard({ user }) {
         </div>
       </div>
       <div className="ml-auto mb-auto">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="#641CC0"
-          className="bi bi-three-dots-vertical"
-          viewBox="0 0 16 16"
-        >
-          <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-        </svg>
+        <OptionsIcon />
       </div>
     </div>
   );
