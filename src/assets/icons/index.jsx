@@ -9,3 +9,6 @@ export * from "./OptionsIcon";
 export * from "./SortByIcon";
 export * from "./FilterByIcon";
 export * from "./SearchIcon";
+export * from "./HomeIcon";
+export * from "./NextIcon";
+export * from "./PreviousIcon";

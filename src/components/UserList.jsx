@@ -7,10 +7,13 @@ import {
   FilterByIcon,
   GridViewIcon,
   ListViewIcon,
+  NextIcon,
+  PreviousIcon,
   SearchIcon,
   SortByIcon,
 } from "../assets/icons";
 import classNames from "classnames";
+import AddUser from "./AddUser";
 
 const UserList = () => {
   const users = useUserStore((state) => state.users);
@@ -58,27 +61,36 @@ const UserList = () => {
           </button>
         </div>
       </div>
-      <div className="flex justify-between items-center px-6 py-4">
-        <div className="flex space-x-4">
-          <button className="flex items-center p-2 bg-[#fafafa] border border-[#E0E0E2] text-[#63666b] rounded">
-            <SortByIcon className={"mr-2"} />
-            Sort By
-          </button>
-          <button className="flex items-center p-2 bg-[#fafafa] border border-[#E0E0E2] text-[#63666b] rounded">
-            <FilterByIcon className={"mr-2"} />
-            Filter By
-          </button>
+      <div className="shadow-lg m-9 rounded-md">
+        <div className="flex justify-between items-center px-6 py-4">
+          <div className="flex space-x-4">
+            <button className="flex items-center p-2 bg-[#fafafa] border border-[#E0E0E2] text-[#63666b] rounded">
+              <SortByIcon className={"mr-2"} />
+              Sort By
+            </button>
+            <button className="flex items-center p-2 bg-[#fafafa] border border-[#E0E0E2] text-[#63666b] rounded">
+              <FilterByIcon className={"mr-2"} />
+              Filter By
+            </button>
+          </div>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search here"
+              className="pl-10 pr-4 py-2 border border-[#e0e0e2] rounded-md w-[200px] focus:outline-none"
+            />
+            <SearchIcon className={"absolute left-3 top-2.5 text-[#641CC0]"} />
+          </div>
         </div>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search here"
-            className="pl-10 pr-4 py-2 border border-[#e0e0e2] rounded-md w-[200px] focus:outline-none"
-          />
-          <SearchIcon className={"absolute left-3 top-2.5 text-[#641CC0]"} />
-        </div>
+        <div>{isListView ? <UserListView /> : <UserGridView />}</div>
+        {/* do this ehile doing Pagination */}
+        {/* <div>
+          <hr />
+          Items per page <input type="number" name="" id="" /> 1-12 of 16{" "}
+          <PreviousIcon />
+          <NextIcon />
+        </div> */}
       </div>
-      <div>{isListView ? <UserListView /> : <UserGridView />}</div>
     </div>
   );
 };
