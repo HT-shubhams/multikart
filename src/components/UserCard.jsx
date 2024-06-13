@@ -16,7 +16,7 @@ export default function UserCard({ user }) {
           {`${user.firstName} ${user.lastName}`}
         </p>
         <p
-          className="font-poppins text-[14px] font-normal leading-[21px] text-left text-ellipsis whitespace-nowrap overflow-hidden max-w-[180px]"
+          className="font-poppins text-[14px] font-normal leading-[21px] text-left text-ellipsis whitespace-nowrap overflow-hidden max-w-[200px]"
           title={user.email}
         >
           {user.email}
