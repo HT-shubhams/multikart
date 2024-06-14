@@ -13,7 +13,6 @@ import {
   SortByIcon,
 } from "../assets/icons";
 import classNames from "classnames";
-import AddUser from "./AddUser";
 
 const UserList = () => {
   const users = useUserStore((state) => state.users);
@@ -61,7 +60,7 @@ const UserList = () => {
           </button>
         </div>
       </div>
-      <div className="shadow-lg m-9 rounded-md">
+      <div className="border shadow-lg m-9 rounded-md">
         <div className="flex justify-between items-center px-6 py-4">
           <div className="flex space-x-4">
             <button className="flex items-center p-2 bg-[#fafafa] border border-[#E0E0E2] text-[#63666b] rounded">

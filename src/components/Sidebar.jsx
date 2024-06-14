@@ -4,6 +4,7 @@ import { DashboardIcon, UsersIcon } from "../assets/icons";
 
 const Sidebar = () => {
   return (
+    // <div className="bg-white min-h-screen min-w-fit h-auto flex flex-col items-center z-10">
     <div className="bg-white min-h-screen min-w-fit h-auto flex flex-col items-center z-10">
       <div className="h-auto min-w-fit mb-2">
         <img
@@ -13,6 +14,7 @@ const Sidebar = () => {
           alt="MultiKart_logo"
         />
       </div>
+      {/* <div className="shadow-right-lg min-h-screen min-w-fit h-auto flex flex-col items-center"> */}
       <div className="shadow-right-lg min-h-screen min-w-fit h-auto flex flex-col items-center">
         <h1 className="pt-10 my-1 text-[14px] text-gray-600 uppercase self-start ml-11 leading-[21px] tracking-[0.13em]">
           Main Menu
